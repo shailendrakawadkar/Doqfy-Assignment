@@ -1,0 +1,18 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Pending Actions</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-card  *ngFor="let action of pendingActions" class="pending-actions">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>{{action.Id}}</mat-card-title>
+                <mat-chip>{{action.Days}}</mat-chip>
+              </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="grey-color">{{action.Files}} files are waiting to be uploaded</p>
+            </mat-card-content>
+          </mat-card>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,21 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Frequently Used</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let frequentlyUsedOption of frequentlyUsedOptions">
+          <mat-card class="frequently-used-card">
+            <mat-card-header>
+                <mat-card-title>{{frequentlyUsedOption.Title}}</mat-card-title>
+                <mat-card-subtitle class="grey-color">{{frequentlyUsedOption.Subtitle}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <a href="#">Get Started >></a>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+        
+    </mat-card-content>
+</mat-card>

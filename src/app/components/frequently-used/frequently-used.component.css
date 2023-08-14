@@ -1,0 +1,9 @@
+.frequently-used-card
+{
+    border: 1px solid #612F87;
+}
+
+.frequently-used-card > mat-card-header
+{
+    padding-top: 8px;
+}

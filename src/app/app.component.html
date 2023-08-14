@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="row body">
+    <div class="col-md-3 col-lg-3">
+        <app-welcome-card></app-welcome-card>
+        <app-wallet-card></app-wallet-card>
+        <app-pending-actions></app-pending-actions>
+    </div>
+    <div class="col-md-9">
+        <app-frequently-used></app-frequently-used>
+
+        <div style="display: flex;">
+            <button mat-stroked-button >
+                All branched
+                <span><mat-icon>keyboard_arrow_down</mat-icon></span>
+              </button>
+              <span class="example-spacer"></span>
+              <button mat-stroked-button style="margin-right: 20px;">
+                Custom Range
+                <span><mat-icon>keyboard_arrow_down</mat-icon></span>
+              </button>
+              <mat-form-field appearance="outline">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <app-order-details></app-order-details>
+
+        <div class="row">
+            <div class="col-md-6">
+                <app-count-card [Title]="'E-sign Count'" [Initiated]="60" [Pending]="15" [Expired]="15" [Signed]="10"></app-count-card>
+            </div>
+            <div class="col-md-6">
+                <app-count-card [Title]="'E-stamp Count'" [Initiated]="60" [Pending]="15" [Expired]="15" [Signed]="10"></app-count-card>
+            </div>
+        </div>
+        
+    </div>
+</div>
